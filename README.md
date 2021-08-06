@@ -4,28 +4,28 @@ This file analyzes cryptocurrencies for potential inclusion in a portfolio. The 
 
 The analysis begins by accessing a csv file of crypto return percent change data ranging from 1-day to 1-year.
 
-![Crypto Data Plot](/Images/crypto_data_plot.png)
+![Crypto Data Plot](./Images/crypto_data_plot.png)
 
 A KMeans model with 4 clusters is initialized and fit to the data, clusters are predicted with the scaled data and added as a column to the existing dataframe.
 
-![Four Cluster Model](/Images/k4_model.png)
+![Four Cluster Model](./Images/k4_model.png)
 
 The assets are then plotted by percent changes in 2-week and 1-year periods, grouped by the predicted clusters.
 
-![Four Cluster Plot](/Images/price_change_percentage_k4.png)
+![Four Cluster Plot](./Images/price_change_percentage_k4.png)
 
 After these initial observations, the file codes an elbow curve to determine the optimal `k` value, which the plot shows to be `4`.
 
-![K Best Value](/Images/k_best_value.png)
+![K Best Value](./Images/k_best_value.png)
 
-![Elbow Curve](/Images/elbow_curve.png)
+![Elbow Curve](./Images/elbow_curve.png)
 
 Next it creates a PCA model instance with 3 components with a total explained variance of 88.46%.
 
-![Fitting PCA](/Images/fitting_pca.png)
+![Fitting PCA](./Images/fitting_pca.png)
 
 A new model with 5 clusters is then fit to the new PCA dataframe, and columns are added from the initial cluster plot axes, as well as the k4 and k5 clusters. Finally, two plots are created using the same axes as the original, one with 4 clusters, the other with 5.
 
-![Four and Five Clusters](/Images/k4_k5_charts.png)
+![Four and Five Clusters](./Images/k4_k5_charts.png)
 
 Based on this analysis, it seems that 4 is the optimal number of clusters to segment the crypto data for portfolio building.
