@@ -1,4 +1,4 @@
-# hw_m10_unsupervised_learning
+# unsupervised_learning
 
 This file analyzes cryptocurrencies for potential inclusion in a portfolio. The goal is to analyze the assets with a number of different factors to look for performance correlations beyond the usual return an volatility measures. It employs unsupervised learning and PCAs to group the assets for easier analysis.
 
